@@ -735,6 +735,9 @@
 		}
 
 /* Image */
+	.img-circle {
+		border-radius: 50%;
+	}
 
 	.image {
 		border-radius: 4px;
