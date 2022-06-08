@@ -35,8 +35,13 @@
     background-color: hsl(330, 100%, 35%);
 }
 
+html {
+    font-size: 14px;
+}
+
 body {
     background-color: var(--purple);
+    font-family: 'Montserrat', sans-serif;
 }
 
 header {
@@ -50,8 +55,12 @@ header {
 h1 {
     color: var(--pink);
     font-size: 5rem;
-    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .spacer {
@@ -74,6 +83,50 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5rem 20vw;
-    background-color: var(--purple);
+    padding: .5rem .25rem;
+}
+
+section .card {
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+.card h2 {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.card h2.flex-reverse {
+    flex-direction: row-reverse;
+}
+
+.card h2::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 1px;
+    margin-left: 20px;
+    margin-right: 20px;
+    width: 100%;
+    max-width: 400px;
+    background-color: var(--pink);
+}
+
+.card h2.flex-reverse::after {
+    flex-direction: row-reverse;
+    /* margin-left: 0px;
+    margin-right: 20px; */
+}
+
+.card p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+@media (min-width: 640px) {
+    html {
+        font-size: 16px;
+    }
 }
